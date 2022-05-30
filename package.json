@@ -1,10 +1,28 @@
 {
+  "name": "inquirer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elsa5152/week12-homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elsa5152/week12-homework/issues"
+  },
+  "homepage": "https://github.com/elsa5152/week12-homework#readme",
   "dependencies": {
-    "axios": "^0.27.2",
     "console.table": "^0.10.0",
     "dotenv": "^16.0.1",
     "inquirer": "^8.2.4",
     "mysql": "^2.18.1",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1"
   }
 }

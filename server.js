@@ -16,7 +16,6 @@ connection.connect((err) => {
     console.log(`Connected as id ${connection.threadId} \n`);
     startApp();
 });
-
 startApp = () => {
     inquirer.prompt([
         {
