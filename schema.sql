@@ -1,13 +1,19 @@
+/*create a database */
 DROP DATABASE IF EXISTS employeeTrackerDB;
 
 CREATE DATABASE employeeTrackerDB;
+/* use this database */
 
 USE employeeTrackerDB;
+
+/* table of department */
 
 CREATE TABLE department (
     department_id INT AUTO_INCREMENT PRIMARY KEY,
     department_name VARCHAR(30)
 );
+
+/* table of role */
 
 CREATE TABLE role (
     role_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -16,6 +22,7 @@ CREATE TABLE role (
     department_id INT,
     CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(department_id) ON DELETE CASCADE
 );
+/* table of employee */
 
 CREATE TABLE employee (
     employee_id INT AUTO_INCREMENT PRIMARY KEY,

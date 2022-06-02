@@ -1,12 +1,14 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql');
+//import console.table 
 const cTable = require('console.table');
 require('dotenv').config();
-
+//create a connection to localhost
 const connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
+//hide the password in .env file
     password: process.env.password,
     database: 'employeeTrackerDB',
 });
@@ -16,6 +18,8 @@ connection.connect((err) => {
     console.log(`Connected as id ${connection.threadId} \n`);
     startApp();
 });
+
+//function the app
 startApp = () => {
     inquirer.prompt([
         {
@@ -121,6 +125,8 @@ viewAllEmployeesByManager = () => {
     })
 }
 
+//add a department
+
 addADepartment = () => {
     inquirer.prompt([
         {
@@ -140,6 +146,7 @@ addADepartment = () => {
         })
     })
 };
+// add a role
 
 addARole = () => {
     connection.query(`SELECT * FROM department;`, (err, res) => {
@@ -177,6 +184,8 @@ addARole = () => {
         })
     })
 };
+
+// add an employee
 
 addAnEmployee = () => {
     connection.query(`SELECT * FROM role;`, (err, res) => {
@@ -309,6 +318,8 @@ updateEmployeesManager = () => {
     })
 };
 
+// remove a department
+
 removeADepartment = () => {
     connection.query(`SELECT * FROM department ORDER BY department_id ASC;`, (err, res) => {
         if (err) throw err;
@@ -336,6 +347,8 @@ removeADepartment = () => {
     })
 }
 
+//remove a role
+
 removeARole = () => {
     connection.query(`SELECT * FROM role ORDER BY role_id ASC;`, (err, res) => {
         if (err) throw err;
@@ -362,6 +375,8 @@ removeARole = () => {
         })
     })
 }
+
+// remove an employee
 
 removeAnEmployee = () => {
     connection.query(`SELECT * FROM employee ORDER BY employee_id ASC;`, (err, res) => {

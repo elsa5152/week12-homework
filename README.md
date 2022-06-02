@@ -20,7 +20,12 @@ SO THAT I can organize and plan my business
 
 * $ npm i dotenv
 
-* add .env file 
+*  MySQL2 package
+
+*  console.table package 
+
+*  add .env file 
+
 
  ## Function the app
 
@@ -35,4 +40,4 @@ SO THAT I can organize and plan my business
 
 ## Video demo of my APP
 
-[Employee Tracker](https://note-taker-123456.herokuapp.com/)
+[Employee Tracker](https://user-images.githubusercontent.com/100567053/171597927-2351b40c-1cce-4d11-94ca-e223cd4e6938.MP4)
